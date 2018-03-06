@@ -2,11 +2,13 @@
 // see: https://handstandsam.com/2018/02/11/kotlin-buildsrc-for-better-gradle-dependency-management/
 
 object Version {
-    const val archComponents = "1.1.0"
+    const val androidSdk = 27
+    const val androidSdkMin = 16
     const val anko = "0.10.4"
+    const val archComponents = "1.1.0"
     const val buildTools = "26.0.2"
-    const val dokka = "0.9.15"
     const val constraint = "1.0.2"
+    const val dokka = "0.9.15"
     const val junit = "4.12"
     const val kluent = "1.35"
     const val kotlin = "1.2.30"
@@ -15,11 +17,10 @@ object Version {
     const val picasso = "2.5.2"
     const val playServices = "11.8.0"
     const val retrofit = "2.3.0"
-    const val room = "1.1.0-alpha3"
+    const val room = "1.0.0" // 1.1.0-alpha3
     const val rxJava = "2.1.9"
-    const val sdk = 27
-    const val sdkMin = 16
     const val supportLib = "27.0.2"
+    const val timber = "4.6.1"
 }
 
 object Dependencies {
@@ -35,10 +36,28 @@ object Dependencies {
     const val supportRecyclerView = "$support:recyclerview-v7:${Version.supportLib}"
 
     // Play Services
+    const val playServicesAds = "com.google.android.gms:play-services-ads:${Version.playServices}"
+    const val playServicesAnalytics = "com.google.android.gms:play-services-analytics:${Version.playServices}"
+    const val playServicesAwareness = "com.google.android.gms:play-services-awareness:${Version.playServices}"
+    const val playServicesBase = "com.google.android.gms:play-services-base:${Version.playServices}"
+    const val playServicesCast = "com.google.android.gms:play-services-cast:${Version.playServices}"
+    const val playServicesDrive = "com.google.android.gms:play-services-drive:${Version.playServices}"
+    const val playServicesFit = "com.google.android.gms:play-services-fitness:${Version.playServices}"
+    const val playServicesGames = "com.google.android.gms:play-services-games:${Version.playServices}"
     const val playServicesGCM = "com.google.android.gms:play-services-gcm:${Version.playServices}"
-    const val playServicesLoc = "com.google.android.gms:play-services-location:${Version.playServices}"
+    const val playServicesLocation = "com.google.android.gms:play-services-location:${Version.playServices}"
+    const val playServicesLogin = "com.google.android.gms:play-services-auth:${Version.playServices}"
     const val playServicesMaps = "com.google.android.gms:play-services-maps:${Version.playServices}"
-
+    const val playServicesNearby = "com.google.android.gms:play-services-nearby:${Version.playServices}"
+    const val playServicesPanorama = "com.google.android.gms:play-services-panorama:${Version.playServices}"
+    const val playServicesPay = "com.google.android.gms:play-services-wallet:${Version.playServices}"
+    const val playServicesPlaces = "com.google.android.gms:play-services-places:${Version.playServices}"
+    const val playServicesPlus = "com.google.android.gms:play-services-plus:${Version.playServices}"    
+    const val playServicesSafetyNet = "com.google.android.gms:play-services-safetynet:${Version.playServices}"
+    const val playServicesSignIn = "com.google.android.gms:play-services-identity:${Version.playServices}"
+    const val playServicesVision = "com.google.android.gms:play-services-vision:${Version.playServices}"
+    const val playServicesWearable = "com.google.android.gms:play-services-wearable:${Version.playServices}"
+    
     // Arch components
     const val archLifecycleRuntime = "android.arch.lifecycle:runtime:${Version.archComponents}"
     const val archLifecycleExtensions = "android.arch.lifecycle:extensions:${Version.archComponents}"
@@ -61,15 +80,13 @@ object Dependencies {
 
     // Square++ stuff
     const val moshi = "com.squareup.moshi:moshi:${Version.moshi}"
-
     const val okHttp = "com.squareup.okhttp3:okhttp:${Version.okHttp}"
     const val okHttpLogging = "com.squareup.okhttp3:logging-interceptor:${Version.okHttp}"
-
     const val picasso = "com.squareup.picasso:picasso:${Version.picasso}"
-
     const val retrofit = "com.squareup.retrofit2:retrofit:${Version.retrofit}"
     const val retrofitRxJava = "com.squareup.retrofit2:adapter-rxjava2:${Version.retrofit}"
     const val retrofitMoshi = "com.squareup.retrofit2:converter-moshi:${Version.retrofit}"
+    const val timber = "com.jakewharton.timber:timber:${Version.timber}"
 
     // RxJava
     const val rxJava = "io.reactivex.rxjava2:rxjava:${Version.rxJava}"
