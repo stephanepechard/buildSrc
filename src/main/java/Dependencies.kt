@@ -10,6 +10,7 @@ object Version {
     const val constraint = "1.0.2"
     const val dokka = "0.9.15"
     const val junit = "4.12"
+    const val gradle = "3.0.1"
     const val kluent = "1.35"
     const val kotlin = "1.2.30"
     const val moshi = "1.5.0"
@@ -25,6 +26,7 @@ object Version {
 
 object Dependencies {
     // Android
+    const val gradleTools = "com.android.tools.build:gradle:${Version.gradle}"
     private const val support = "com.android.support"
     const val supportAnnotations = "$support:support-annotations:${Version.supportLib}"
     const val supportAppcompatV7 = "$support:appcompat-v7:${Version.supportLib}"
