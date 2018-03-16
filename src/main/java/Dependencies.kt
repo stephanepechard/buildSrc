@@ -17,7 +17,7 @@ object Version {
     const val okHttp = "3.10.0"
     const val picasso = "2.5.2"
     const val playServices = "11.8.0"
-    const val retrofit = "2.3.0"
+    const val retrofit = "2.4.0"
     const val room = "1.0.0" // 1.1.0-alpha3
     const val rxJava = "2.1.9"
     const val supportLib = "27.0.2"
@@ -59,14 +59,20 @@ object Dependencies {
     const val playServicesSignIn = "com.google.android.gms:play-services-identity:${Version.playServices}"
     const val playServicesVision = "com.google.android.gms:play-services-vision:${Version.playServices}"
     const val playServicesWearable = "com.google.android.gms:play-services-wearable:${Version.playServices}"
-    
-    // Arch components
-    const val archLifecycleRuntime = "android.arch.lifecycle:runtime:${Version.archComponents}"
+
+    // Arch components, see: https://developer.android.com/topic/libraries/architecture/adding-components.html
+    const val archLifecycleCompiler = "android.arch.lifecycle:compiler:${Version.archComponents}"
+    const val archLifecycleCompilerJava8 = "android.arch.lifecycle:common-java8:${Version.archComponents}"
     const val archLifecycleExtensions = "android.arch.lifecycle:extensions:${Version.archComponents}"
-    const val archLifecycleCompiler = "android.arch.lifecycle:common-java8:${Version.archComponents}"
-    const val archRoomRuntime = "android.arch.persistence.room:runtime:${Version.room}"
+    const val archLifecycleLiveData = "android.arch.lifecycle:livedata:${Version.archComponents}"
+    const val archLifecycleLiveDataTestHelper = "android.arch.core:core-testing:${Version.archComponents}"
+    const val archLifecycleViewModel = "android.arch.lifecycle:viewmodel:${Version.archComponents}"
+    const val archLifecycleRuntime = "android.arch.lifecycle:runtime:${Version.archComponents}"
+    const val archPaging = "android.arch.paging.room:runtime:${Version.room}"
     const val archRoomCompiler = "android.arch.persistence.room:compiler:${Version.room}"
+    const val archRoomRuntime = "android.arch.persistence.room:runtime:${Version.room}"
     const val archRoomRxjava = "android.arch.persistence.room:rxjava2:${Version.room}"
+    const val archRoomTestHelper = "android.arch.persistence.room:testing:${Version.room}"
 
     // junit
     const val junit = "junit:junit:${Version.junit}"
@@ -74,7 +80,7 @@ object Dependencies {
     // Kotlin
     const val anko = "org.jetbrains.anko:anko:${Version.anko}"
     const val dokkaGradlePlugin = "org.jetbrains.dokka:dokka-gradle-plugin:${Version.dokka}"
-    const val kluent = "org.amshove.kluent:kluent:${Version.kluent}"
+    const val kluent = "org.amshove.kluent:kluent-android:${Version.kluent}"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.kotlin}"
     const val kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Version.kotlin}"
     const val kotlinStdlibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Version.kotlin}"
