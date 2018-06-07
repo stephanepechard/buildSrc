@@ -12,7 +12,7 @@ object Version {
     const val archRoom = "1.1.0"
     const val archWorkManager = "1.0.0-alpha01"
     const val buildTools = "27.0.3"
-    const val constraint = "1.1.0"
+    const val constraint = "1.1.1"
     const val dokka = "0.9.15"
     const val junit = "4.12"
     const val gradle = "3.0.1"
