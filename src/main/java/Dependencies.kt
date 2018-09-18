@@ -4,7 +4,7 @@
 object Version {
     const val androidSdk = 28
     const val androidSdkMin = 16
-    const val androidX = "1.0.0-alpha3"
+    const val androidX = "2.0.0-alpha1"
     const val anko = "0.10.5"
     const val archComponents = "1.1.1"
     const val archNavigation = "1.0.0-alpha03"
@@ -29,7 +29,9 @@ object Version {
     const val rxJava = "2.1.16"
     const val supportLib = "27.1.1"
     const val timber = "4.7.1"
+    const val threetenabp = "1.1.0"
 }
+
 
 object Dependencies {
     // Android
@@ -81,7 +83,7 @@ object Dependencies {
     const val playServicesPanorama = "com.google.android.gms:play-services-panorama:${Version.playServices}"
     const val playServicesPay = "com.google.android.gms:play-services-wallet:${Version.playServices}"
     const val playServicesPlaces = "com.google.android.gms:play-services-places:${Version.playServices}"
-    const val playServicesPlus = "com.google.android.gms:play-services-plus:${Version.playServices}"    
+    const val playServicesPlus = "com.google.android.gms:play-services-plus:${Version.playServices}"
     const val playServicesSafetyNet = "com.google.android.gms:play-services-safetynet:${Version.playServices}"
     const val playServicesSignIn = "com.google.android.gms:play-services-identity:${Version.playServices}"
     const val playServicesVision = "com.google.android.gms:play-services-vision:${Version.playServices}"
@@ -128,9 +130,9 @@ object Dependencies {
     const val retrofitRxJava = "com.squareup.retrofit2:adapter-rxjava2:${Version.retrofit}"
     const val retrofitMoshi = "com.squareup.retrofit2:converter-moshi:${Version.retrofit}"
     const val timber = "com.jakewharton.timber:timber:${Version.timber}"
+    const val threetenabp = "com.jakewharton.threetenabp:threetenabp:${Version.threetenabp}"
 
     // RxJava
     const val rxJava = "io.reactivex.rxjava2:rxjava:${Version.rxJava}"
     const val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Version.rxAndroid}"
-
 }
