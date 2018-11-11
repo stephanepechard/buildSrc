@@ -4,8 +4,8 @@
 object Version {
     const val androidSdk = 28
     const val androidSdkMin = 16
-    const val androidX = "2.0.0-alpha1"
-    const val anko = "0.10.5"
+    const val androidX = "2.0.0-rc01"
+    const val anko = "0.10.8"
     const val archComponents = "1.1.1"
     const val archNavigation = "1.0.0-alpha03"
     const val archPaging = "1.0.0"
@@ -16,20 +16,21 @@ object Version {
     const val dokka = "0.9.17"
     const val junit = "4.12"
     const val gradle = "3.0.1"
-    const val kluent = "1.39"
-    const val kotlin = "1.2.60"
+    const val kluent = "1.42"
+    const val kotlin = "1.3.0"
     const val kotlinXCoroutines = "0.22.5"
-    const val moshi = "1.6.0"
+    const val moshi = "1.8.0"
     const val multidex = "1.0.3"
-    const val okHttp = "3.10.0"
-    const val picasso = "2.5.2"
+    const val okHttp = "3.11.0"
+    const val picasso = "2.71828"
     const val playServices = "15.0.1"
     const val retrofit = "2.4.0"
-    const val rxAndroid = "2.0.2"
-    const val rxJava = "2.1.16"
-    const val supportLib = "27.1.1"
+    const val retrofitCoroutines = "0.9.2"
+    const val rxAndroid = "2.1.0"
+    const val rxJava = "2.2.3"
+    const val supportLib = "28.0.2"
     const val timber = "4.7.1"
-    const val threetenabp = "1.1.0"
+    const val threetenabp = "1.1.1"
 }
 
 
@@ -129,6 +130,7 @@ object Dependencies {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Version.retrofit}"
     const val retrofitRxJava = "com.squareup.retrofit2:adapter-rxjava2:${Version.retrofit}"
     const val retrofitMoshi = "com.squareup.retrofit2:converter-moshi:${Version.retrofit}"
+    const val retrofitCoroutines = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Version.retrofitCoroutines}"
     const val timber = "com.jakewharton.timber:timber:${Version.timber}"
     const val threetenabp = "com.jakewharton.threetenabp:threetenabp:${Version.threetenabp}"
 
