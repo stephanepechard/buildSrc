@@ -5,7 +5,7 @@ object Version {
     const val androidSdk = 28
     const val androidSdkMin = 16
     const val androidX = "1.0.0"
-    const val anko = "0.10.5"
+    const val anko = "0.10.8"
     const val archComponents = "1.1.1"
     const val archCore = "2.0.0"
     const val archNavigation = "1.0.0-alpha09"
@@ -15,6 +15,7 @@ object Version {
     const val buildTools = "28.0.3"
     const val constraint = "1.1.2"
     const val dokka = "0.9.17"
+    const val espresso = "3.1.1"
     const val junit = "4.12"
     const val gradle = "3.3.0-rc03"
     const val kluent = "1.42"
@@ -32,18 +33,131 @@ object Version {
     const val retrofit = "2.5.0"
     const val room = "2.0.0"
     const val rxAndroid = "2.1.0"
-    const val rxJava = "2.1.16"
-    const val supportLib = "27.1.1"
     const val testEspresso = "3.0.2"
     const val testRunnerAndRules = "1.0.2"
+    const val retrofitCoroutines = "0.9.2"
+    const val rxJava = "2.2.3"
+    const val supportLib = "28.0.0"
     const val timber = "4.7.1"
     const val threetenabp = "1.1.1"
 }
 
 
 object Dependencies {
-    // Android
     const val gradleTools = "com.android.tools.build:gradle:${Version.gradle}"
+
+    // AndroidX
+    // see: https://developer.android.com/jetpack/androidx/migrate          for general packages
+    // see: https://developer.android.com/kotlin/ktx                        for ktx packages
+    // see: https://developer.android.com/training/testing/set-up-project   for test packages
+    const val xAnnotation = "androidx.annotation:annotation:1.0.1"
+    const val xAppCompat = "androidx.appcompat:appcompat:1.0.2"
+    const val xArchCore = "androidx.arch.core:core:${Version.archCore}"
+    const val xArchCoreCommon = "androidx.arch.core:core-common:${Version.archCore}"
+    const val xArchCoreRuntime = "androidx.arch.core:core-runtime:${Version.archCore}"
+    const val xArchCoreTesting = "androidx.arch.core:core-testing:${Version.archCore}"
+    const val xAsyncLayoutInflater = "androidx.asynclayoutinflater:asynclayoutinflater:1.0.0"
+    const val xBrowser = "androidx.browser:browser:1.0.0"
+    const val xCar = "androidx.car:car:1.0.0-alpha5"
+    const val xCardview = "androidx.cardview:cardview:1.0.0"
+    const val xCollection = "androidx.collection:collection-ktx:1.0.0"
+    const val xConstraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
+    const val xConstraintLayoutSolver = "androidx.constraintlayout:constraintlayout-solver:1.1.3"
+    const val xContentpager = "androidx.contentpager:contentpager:1.0.0"
+    const val xCoordinatorLayout = "androidx.coordinatorlayout:coordinatorlayout:1.0.0"
+    const val xCore = "androidx.core:core:1.0.1"
+    const val xCoreKtx = "androidx.core:core-ktx:1.0.1"
+    const val xCursorAdapter = "androidx.cursoradapter:cursoradapter:1.0.0"
+    const val xCustomView = "androidx.customview:customview:1.0.0"
+    const val xDocumentFile = "androidx.documentfile:documentfile:1.0.0"
+    const val xDrawerLayout = "androidx.drawerlayout:drawerlayout:1.0.0"
+    const val xDynamicAnimation = "androidx.dynamicanimation:dynamicanimation:1.0.0"
+    const val xEmoji = "androidx.emoji:emoji:1.0.0"
+    const val xEmojiAppcompat = "androidx.emoji:emoji-appcompat:1.0.0"
+    const val xEmojiBundled = "androidx.emoji:emoji-bundled:1.0.0"
+    const val xEspressoAccessibility = "androidx.test.espresso:espresso-accessibility:${Version.espresso}"
+    const val xEspressoContrib = "androidx.test.espresso:espresso-contrib:${Version.espresso}"
+    const val xEspressoCore = "androidx.test.espresso:espresso-core:${Version.espresso}"
+    const val xEspressoIdlingConurrent = "androidx.test.espresso.idling:idling-concurrent:${Version.espresso}"
+    const val xEspressoIdlingNet = "androidx.test.espresso.idling:idling-net:${Version.espresso}"
+    const val xEspressoIdlingResource = "androidx.test.espresso:espresso-idling-resource:${Version.espresso}"
+    const val xEspressoIntents = "androidx.test.espresso:espresso-intents:${Version.espresso}"
+    const val xEspressoRemote = "androidx.test.espresso:espresso-remote:${Version.espresso}"
+    const val xEspressoWeb = "androidx.test.espresso:espresso-web:${Version.espresso}"
+    const val xExifInterface = "androidx.exifinterface:exifinterface:1.0.0"
+    const val xFragment = "androidx.fragment:fragment-ktx:1.0.0"
+    const val xGridLayout = "androidx.gridlayout:gridlayout:1.0.0"
+    const val xHeifWriter = "androidx.heifwriter:heifwriter:1.0.0"
+    const val xInterpolator = "androidx.interpolator:interpolator:1.0.0"
+    const val xLeanback = "androidx.leanback:leanback:1.0.0"
+    const val xLeanbackPreference = "androidx.leanback:leanback-preference:1.0.0"
+    const val xLegacyCoreUi = "androidx.legacy:legacy-support-core-ui:1.0.0"
+    const val xLegacyCoreUtils = "androidx.legacy:legacy-support-core-utils:1.0.0"
+    const val xLegacyPreference = "androidx.legacy:legacy-preference-v14:1.0.0"
+    const val xLegacyV13 = "androidx.legacy:legacy-support-v13:1.0.0"
+    const val xLegacyV4 = "androidx.legacy:legacy-support-v4:1.0.0"
+    const val xLifecycleCommon = "androidx.lifecycle:lifecycle-common:${Version.lifecycle}"
+    const val xLifecycleCommonJava8 = "androidx.lifecycle:lifecycle-common-java8:${Version.lifecycle}"
+    const val xLifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Version.lifecycle}"
+    const val xLifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Version.lifecycle}"
+    const val xLifecycleLivedata = "androidx.lifecycle:lifecycle-livedata:${Version.lifecycle}"
+    const val xLifecycleLivedataCore = "androidx.lifecycle:lifecycle-livedata-core:${Version.lifecycle}"
+    const val xLifecycleReactiveStreams = "androidx.lifecycle:lifecycle-reactivestreams:${Version.lifecycle}"
+    const val xLifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:${Version.lifecycle}"
+    const val xLifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Version.lifecycle}"
+    const val xLoader = "androidx.loader:loader:1.0.0"
+    const val xLocalBroadcastManager = "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0"
+    const val xMaterial = "com.google.android.material:material:1.0.0"
+    const val xMedia = "androidx.media:media:1.0.0"
+    const val xMedia2 = "androidx.media2:media2:1.0.0-alpha03"
+    const val xMedia2Exoplayer = "androidx.media2:media2-exoplayer:1.0.0-alpha01"
+    const val xMediaRouter = "androidx.mediarouter:mediarouter:1.0.0"
+    const val xMultidex = "androidx.multidex:multidex:2.0.1"
+    const val xMultidexInstrumentation = "androidx.multidex:multidex-instrumentation:2.0.0"
+    const val xPagingCommon = "androidx.paging:paging-common:2.0.0"
+    const val xPagingRuntime = "androidx.paging:paging-runtime:2.0.0"
+    const val xPagingRxJava2 = "androidx.paging:paging-rxjava2:2.0.0"
+    const val xPalette = "androidx.palette:palette-ktx:1.0.0"
+    const val xPercentLayout = "androidx.percentlayout:percentlayout:1.0.0"
+    const val xPreference = "androidx.preference:preference:1.0.0"
+    const val xPrint = "androidx.print:print:1.0.0"
+    const val xRecommendation = "androidx.recommendation:recommendation:1.0.0"
+    const val xRecyclerView = "androidx.recyclerview:recyclerview:1.0.0"
+    const val xRecyclerViewSelection = "androidx.recyclerview:recyclerview-selection:1.0.0"
+    const val xRoomCommon = "androidx.room:room-common:${Version.room}"
+    const val xRoomCompiler = "androidx.room:room-compiler:${Version.room}"
+    const val xRoomGuava = "androidx.room:room-guava:${Version.room}"
+    const val xRoomMigration = "androidx.room:room-migration:${Version.room}"
+    const val xRoomRuntime = "androidx.room:room-runtime:${Version.room}"
+    const val xRoomRxJava2 = "androidx.room:room-rxjava2:${Version.room}"
+    const val xRoomTesting = "androidx.room:room-testing:${Version.room}"
+    const val xSliceBuilders = "androidx.slice:slice-builders:1.0.0"
+    const val xSliceCore = "androidx.slice:slice-core:1.0.0"
+    const val xSliceView = "androidx.slice:slice-view:1.0.0"
+    const val xSlidingPaneLayout = "androidx.slidingpanelayout:slidingpanelayout:1.0.0"
+    const val xSqlite = "androidx.sqlite:sqlite-ktx:2.0.0"
+    const val xSqliteFramework = "androidx.sqlite:sqlite-framework:2.0.0"
+    const val xSwipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    const val xTestJank = "androidx.test.jank:janktesthelper:1.0.1"
+    const val xTestCore = "androidx.test:core:1.1.0"
+    const val xTestMonitor = "androidx.test:monitor:1.1.1"
+    const val xTestOrchestrator = "androidx.test:orchestrator:1.1.1"
+    const val xTestRules = "androidx.test:rules:1.1.1"
+    const val xTestRunner = "androidx.test:runner:1.1.1"
+    const val xTestServices = "androidx.test:test-services:1.1.0"
+    const val xTestUiAutomator = "androidx.test.uiautomator:uiautomator:2.2.0"
+    const val xTextClassifier = "androidx.textclassifier:textclassifier:1.0.0"
+    const val xTransition = "androidx.transition:transition:1.0.1"
+    const val xTvProvider = "androidx.tvprovider:tvprovider:1.0.0"
+    const val xVectorDrawable = "androidx.vectordrawable:vectordrawable:1.0.1"
+    const val xVectorDrawableAnimated = "androidx.vectordrawable:vectordrawable-animated:1.0.0"
+    const val xVersionedParcelable = "androidx.versionedparcelable:versionedparcelable:1.0.0"
+    const val xViewPager = "androidx.viewpager:viewpager:1.0.0"
+    const val xWear = "androidx.wear:wear:1.0.0"
+    const val xWebkit = "androidx.webkit:webkit:1.0.0"
+
+
+    // Android legacy support libraries
     private const val support = "com.android.support"
     const val supportV4Compat = "$support:support-compat:${Version.supportLib}"
     const val supportV4CoreUtils = "$support:support-core-utils:${Version.supportLib}"
@@ -60,7 +174,6 @@ object Dependencies {
     const val supportV14Preference = "$support:preference-v14:${Version.supportLib}"
     const val supportV17LeanBack = "$support:leanback-v17:${Version.supportLib}"
     const val supportV17PreferenceLeanBack = "$support:preference-leanback-v17:${Version.supportLib}"
-
     const val supportAnnotations = "$support:support-annotations:${Version.supportLib}"
     const val supportCustomTabs = "$support:customtabs:${Version.supportLib}"
     const val supportDesign = "$support:design:${Version.supportLib}"
@@ -69,7 +182,6 @@ object Dependencies {
     const val supportVectorDrawable = "$support:support-vector-drawable:${Version.supportLib}"
     const val supportAnimatedVectorDrawable = "$support:animated-vector-drawable:${Version.supportLib}"
     const val supportWear = "$support:wear:${Version.supportLib}"
-
     // those have specific version number
     const val supportConstraint = "$support.constraint:constraint-layout:${Version.constraint}"
     const val supportMultidex = "$support:multidex:${Version.multidex}"
@@ -97,6 +209,12 @@ object Dependencies {
     const val playServicesVision = "com.google.android.gms:play-services-vision:${Version.playServices}"
     const val playServicesWearable = "com.google.android.gms:play-services-wearable:${Version.playServices}"
 
+    // Firebase (each one may have different versions, see: https://firebase.google.com/docs/android/setup?authuser=1#available_libraries)
+    const val firebaseCore = "com.google.firebase:firebase-core:16.0.6"
+    const val firebaseCrashlytics = "com.crashlytics.sdk.android:crashlytics:2.9.8"
+    const val firebaseInstanceId = "com.google.firebase:firebase-iid:17.0.4"
+    const val firebaseMessaging = "com.google.firebase:firebase-messaging:17.3.4"
+
     // Arch components, see: https://developer.android.com/topic/libraries/architecture/adding-components.html
     private const val arch = "android.arch"
     const val archLifecycleRuntime = "$arch.lifecycle:runtime:${Version.archComponents}"
@@ -112,9 +230,6 @@ object Dependencies {
     const val archRoomRxjava = "$arch.persistence.room:rxjava2:${Version.archRoom}"
     const val archWorkManager = "$arch.work:work-runtime:${Version.archWorkManager}"
 
-    // junit
-    const val junit = "junit:junit:${Version.junit}"
-
     // Kotlin
     const val anko = "org.jetbrains.anko:anko:${Version.anko}"
     const val dokkaGradlePlugin = "org.jetbrains.dokka:dokka-gradle-plugin:${Version.dokka}"
@@ -128,6 +243,15 @@ object Dependencies {
     const val kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Version.kotlin}"
     const val kotlinStdlibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Version.kotlin}"
 
+    // Koin
+    const val koinAndroid = "org.koin:koin-android:${Version.koin}"
+    const val koinAndroidXScope = "org.koin:koin-androidx-scope:${Version.koin}"
+    const val koinAndroidViewModel = "org.koin:koin-android-viewmodel:${Version.koin}"
+
+    // testing
+    const val junit = "junit:junit:${Version.junit}"
+    const val mockito = "com.nhaarman:mockito-kotlin:${Version.mockito}"
+
     // Square++ stuff
     const val moshi = "com.squareup.moshi:moshi:${Version.moshi}"
     const val moshiKotlin = "com.squareup.moshi:moshi-kotlin:${Version.moshi}"
@@ -137,10 +261,15 @@ object Dependencies {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Version.retrofit}"
     const val retrofitRxJava = "com.squareup.retrofit2:adapter-rxjava2:${Version.retrofit}"
     const val retrofitMoshi = "com.squareup.retrofit2:converter-moshi:${Version.retrofit}"
+    const val retrofitCoroutines = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Version.retrofitCoroutines}"
     const val timber = "com.jakewharton.timber:timber:${Version.timber}"
     const val threetenabp = "com.jakewharton.threetenabp:threetenabp:${Version.threetenabp}"
 
     // RxJava
     const val rxJava = "io.reactivex.rxjava2:rxjava:${Version.rxJava}"
     const val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Version.rxAndroid}"
+
+    // Permissions dispatcher
+    const val permissionsDispatcher = "com.github.hotchemi:permissionsdispatcher:${Version.permissionsDispatcher}"
+    const val permissionsDispatcherProcessor = "com.github.hotchemi:permissionsdispatcher-processor:${Version.permissionsDispatcher}"
 }
